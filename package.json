@@ -1,6 +1,8 @@
 {
   "name": "infinity.pdf",
   "version": "1.0.0",
+  "preferGlobal": true,
+  "bin": "./app.js",
   "description": "Every document page to PDF file",
   "main": "app.js",
   "scripts": {
@@ -15,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Makarov628/INFINITY.pdf/issues"
   },
-  "homepage": "https://github.com/Makarov628/INFINITY.pdf#readme"
+  "homepage": "https://github.com/Makarov628/INFINITY.pdf#readme",
+  "dependencies": {
+    "pdf-lib": "^1.7.0"
+  }
 }
