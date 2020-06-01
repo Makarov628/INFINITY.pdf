@@ -9,7 +9,7 @@ const start = async () => {
 
     if (args.length === 0) {
         console.log('Необходимо указать путь к файлу, или перетащите на .exe файл ваш документ .pdf')
-    } else {
+    } else if (fs.existsSync(filePath)) {
 
         const extension = path.extname(filePath).toLowerCase()
         const filename = path.basename(filePath, extension)
@@ -22,7 +22,7 @@ const start = async () => {
 
             if (!fs.existsSync(`./${filename}`)) { fs.mkdirSync(`./${filename}`) }
 
-            console.log(`Количество страниц: ${pages.length}\n`)
+            console.log(`\nКоличество страниц: ${pages.length}\n`)
 
             for (let i = 0; i < pages.length; i++) {
                 
